@@ -874,6 +874,10 @@ img {
     z-index: 999999;
 }
 
+.language-dropdown.open .dropdown-menu {
+    display: block !important;
+}
+
 .language-dropdown .dropdown-menu a {
     display: block;
     margin: 4px;

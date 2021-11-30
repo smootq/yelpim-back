@@ -119,22 +119,22 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label"><?php echo trans('image'); ?> (1920x600)</label>
+                    <label class="control-label"><?php echo trans('image'); ?> (370x245)</label>
                     <div class="display-block">
                         <a class='btn btn-success btn-sm btn-file-upload'>
                             <?php echo trans('select_image'); ?>
-                            <input type="file" name="file" size="40" accept=".png, .jpg, .jpeg, .gif" required onchange="show_preview_image(this);">
+                            <input type="file" name="file" size="40" accept=".png" required onchange="show_preview_image(this);">
                         </a>
                     </div>
                     <img src="<?php echo IMG_BASE64_1x1; ?>" id="img_preview_file" class="img-file-upload-preview">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" style="display: none;">
                     <label class="control-label"><?php echo trans('image'); ?>&nbsp;(for mobile) (768x500)</label>
                     <div class="display-block">
                         <a class='btn btn-success btn-sm btn-file-upload'>
                             <?php echo trans('select_image'); ?>
-                            <input type="file" name="file_mobile" size="40" accept=".png, .jpg, .jpeg, .gif" required onchange="show_preview_image(this);">
+                            <input type="file" name="file_mobile" size="40" accept=".png, .jpg, .jpeg, .gif" onchange="show_preview_image(this);">
                         </a>
                     </div>
                     <img src="<?php echo IMG_BASE64_1x1; ?>" id="img_preview_file_mobile" class="img-file-upload-preview">

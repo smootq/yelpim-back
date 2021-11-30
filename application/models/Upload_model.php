@@ -201,9 +201,9 @@ class Upload_model extends CI_Model
     //category image upload
     public function category_image_upload($path)
     {
-        $new_path = 'uploads/category/category_' . generate_unique_id() . '.jpg';
+        $new_path = 'uploads/category/category_' . generate_unique_id() . '.png';
         $img = Image::make($path)->orientate();
-        $img->fit(420, 420);
+        $img->fit(209, 172);
         $img->save(FCPATH . $new_path, $this->quality);
         return $new_path;
     }
@@ -211,9 +211,9 @@ class Upload_model extends CI_Model
     //slider image upload
     public function slider_image_upload($path)
     {
-        $new_path = 'uploads/slider/slider_' . generate_unique_id() . '.jpg';
+        $new_path = 'uploads/slider/slider_' . generate_unique_id() . '.png';
         $img = Image::make($path)->orientate();
-        $img->fit(1920, 600);
+        $img->fit(370, 245);
         $img->save(FCPATH . $new_path, $this->quality);
         return $new_path;
     }
@@ -221,9 +221,9 @@ class Upload_model extends CI_Model
     //slider image mobile upload
     public function slider_image_mobile_upload($path)
     {
-        $new_path = 'uploads/slider/slider_' . generate_unique_id() . '.jpg';
+        $new_path = 'uploads/slider/slider_' . generate_unique_id() . '.png';
         $img = Image::make($path)->orientate();
-        $img->fit(768, 500);
+        $img->fit(370, 245);
         $img->save(FCPATH . $new_path, $this->quality);
         return $new_path;
     }

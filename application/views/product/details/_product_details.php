@@ -1,35 +1,10 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
+
+
+
 <div class="row">
     <div class="col-12">
-        <?php if ($product->product_type == 'digital'):
-            if ($product->is_free_product == 1):
-                if ($this->auth_check):?>
-                    <div class="row-custom m-t-10">
-                        <?php echo form_open('download-free-digital-file-post'); ?>
-                        <input type="hidden" name="product_id" value="<?php echo $product->id; ?>">
-                        <button class="btn btn-instant-download"><i class="icon-download-solid"></i><?php echo trans("download") ?></button>
-                        <?php echo form_close(); ?>
-                    </div>
-                <?php else: ?>
-                    <div class="row-custom m-t-10">
-                        <button class="btn btn-instant-download" data-toggle="modal" data-target="#loginModal"><i class="icon-download-solid"></i><?php echo trans("download") ?></button>
-                    </div>
-                <?php endif; ?>
-            <?php else: ?>
-                <?php if (!empty($digital_sale)): ?>
-                    <div class="row-custom m-t-10">
-                        <?php echo form_open('download-purchased-digital-file-post'); ?>
-                        <input type="hidden" name="sale_id" value="<?php echo $digital_sale->id; ?>">
-                        <button class="btn btn-instant-download"><i class="icon-download-solid"></i><?php echo trans("download") ?></button>
-                        <?php echo form_close(); ?>
-                    </div>
-                <?php else: ?>
-                    <label class="label-instant-download"><i class="icon-download-solid"></i><?php echo trans("instant_download"); ?></label>
-                <?php endif;
-            endif;
-        endif; ?>
-
-        <h1 class="product-title"><?= html_escape($title); ?></h1>
+        <h1 class="product-title"><?= html_escape($title); ?>  </h1>
         <?php if ($product->status == 0): ?>
             <label class="badge badge-warning badge-product-status"><?php echo trans("pending"); ?></label>
         <?php elseif ($product->visibility == 0): ?>

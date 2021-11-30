@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-<ul>
+<ul class="social clean">
     <?php if (!empty($this->settings->facebook_url)): ?>
         <li><a href="<?php echo html_escape($this->settings->facebook_url); ?>" class="facebook"><i class="icon-facebook"></i></a></li>
     <?php endif;

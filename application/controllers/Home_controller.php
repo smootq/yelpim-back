@@ -185,6 +185,7 @@ class Home_controller extends Home_Core_Controller
      */
     private function category($category)
     {
+
         if (empty($category)) {
             redirect($this->agent->referrer());
             exit();
@@ -219,6 +220,10 @@ class Home_controller extends Home_Core_Controller
         $data['custom_filters'] = $this->field_model->get_custom_filters($category->id, $data["parent_categories"]);
         $data["query_string_array"] = get_query_string_array($data['custom_filters']);
         $data["query_string_object_array"] = convert_query_string_to_object_array($data["query_string_array"]);
+
+        //special offers
+        $data["index_categories"] = $this->category_model->get_index_categories();
+        $data["special_offers"] = $this->product_model->get_special_offers();
 
         //get paginated posts
         $pagination = $this->paginate(generate_category_url($data["category"]), $this->product_model->get_paginated_filtered_products_count($data["query_string_array"], $data["subcategory_ids"], $data['custom_filters']), $this->product_per_page);

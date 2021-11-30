@@ -18,6 +18,7 @@ class Category_controller extends Admin_Core_Controller
      */
     public function categories()
     {
+
         $data['title'] = trans("categories");
 
         $data["lang"] = $this->input->get("lang", true);

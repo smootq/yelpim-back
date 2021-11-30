@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/vendor/pace/pace.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/vendor/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/css/plugins-1.8.css">
+    
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -60,6 +61,10 @@
         var csfr_token_name = "<?= $this->security->get_csrf_token_name(); ?>";
         var csfr_cookie_name = "<?= $this->config->item('csrf_cookie_name'); ?>";
     </script>
+    <style> .nav-hide{
+        display: none !important; 
+    } 
+    </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -157,19 +162,19 @@
                         <i class="fa fa-home"></i> <span><?php echo trans("home"); ?></span>
                     </a>
                 </li>
-                <li class="nav-navigation">
+                <li class="nav-navigation nav-hide">
                     <a href="<?php echo admin_url(); ?>navigation">
                         <i class="fa fa-th"></i>
                         <span><?php echo trans("navigation"); ?></span>
                     </a>
                 </li>
-                <li class="nav-slider">
+                <li class="nav-slider ">
                     <a href="<?php echo admin_url(); ?>slider">
                         <i class="fa fa-sliders"></i>
                         <span><?php echo trans("slider"); ?></span>
                     </a>
                 </li>
-                <li class="nav-homepage-manager">
+                <li class="nav-homepage-manager nav-hide">
                     <a href="<?php echo admin_url(); ?>homepage-manager">
                         <i class="fa fa-clone"></i>
                         <span><?php echo trans("homepage_manager"); ?></span>
@@ -189,7 +194,7 @@
                         <li class="nav-invoices"><a href="<?php echo admin_url(); ?>invoices"> <?php echo trans("invoices"); ?></a></li>
                     </ul>
                 </li>
-                <li class="nav-digital-sales">
+                <li class="nav-digital-sales nav-hide">
                     <a href="<?php echo admin_url(); ?>digital-sales">
                         <i class="fa fa-shopping-bag"></i>
                         <span><?php echo trans("digital_sales"); ?></span>
@@ -241,7 +246,7 @@
                         <li><a href="<?php echo generate_dash_url("bulk_product_upload"); ?>"> <?php echo trans("bulk_product_upload"); ?></a></li>
                     </ul>
                 </li>
-                <li class="treeview<?php is_admin_nav_active(['featured-products', 'featured-products-pricing', 'featured-products-transactions']); ?>">
+                <li class="nav-hide treeview<?php is_admin_nav_active(['featured-products', 'featured-products-pricing', 'featured-products-transactions']); ?>">
                     <a href="#">
                         <i class="fa fa-dollar" aria-hidden="true"></i>
                         <span><?php echo trans("featured_products"); ?></span>
@@ -253,7 +258,7 @@
                         <li class="nav-featured-products-transactions"><a href="<?php echo admin_url(); ?>featured-products-transactions"> <?php echo trans("transactions"); ?></a></li>
                     </ul>
                 </li>
-                <li class="nav-quote-requests">
+                <li class="nav-quote-requests nav-hide">
                     <a href="<?php echo admin_url(); ?>quote-requests">
                         <i class="fa fa-tag"></i> <span><?php echo trans("quote_requests"); ?></span>
                     </a>
@@ -272,7 +277,7 @@
                         <?php endif; ?>
                     </ul>
                 </li>
-                <li class="treeview<?php is_admin_nav_active(['add-custom-field', 'custom-fields', 'update-custom-field', 'custom-field-options']); ?>">
+                <li class="nav-hide treeview<?php is_admin_nav_active(['add-custom-field', 'custom-fields', 'update-custom-field', 'custom-field-options']); ?>">
                     <a href="#">
                         <i class="fa fa-plus-square-o"></i>
                         <span><?php echo trans("custom_fields"); ?></span>
@@ -285,7 +290,7 @@
                 </li>
 
                 <li class="header"><?php echo trans("content"); ?></li>
-                <li class="treeview<?php is_admin_nav_active(['add-page', 'pages', 'update-page']); ?>">
+                <li class="nav-hide treeview<?php is_admin_nav_active(['add-page', 'pages', 'update-page']); ?>">
                     <a href="#">
                         <i class="fa fa-file"></i>
                         <span><?php echo trans("pages"); ?></span>
@@ -358,13 +363,13 @@
                         <span><?php echo trans("storage"); ?></span>
                     </a>
                 </li>
-                <li class="nav-cache-system">
+                <li class="nav-cache-system nav-hide">
                     <a href="<?php echo admin_url(); ?>cache-system">
                         <i class="fa fa-database"></i>
                         <span><?php echo trans("cache_system"); ?></span>
                     </a>
                 </li>
-                <li class="nav-seo-tools">
+                <li class="nav-seo-tools nav-hide">
                     <a href="<?php echo admin_url(); ?>seo-tools">
                         <i class="fa fa-wrench"></i> <span><?php echo trans("seo_tools"); ?></span>
                     </a>
@@ -408,7 +413,7 @@
                         <span><?php echo trans("abuse_reports"); ?></span>
                     </a>
                 </li>
-                <li class="treeview<?php is_admin_nav_active(['send-email-subscribers', 'subscribers']); ?>">
+                <li class="nav-hide treeview<?php is_admin_nav_active(['send-email-subscribers', 'subscribers']); ?>">
                     <a href="#">
                         <i class="fa fa-envelope-o"></i> <span><?php echo trans("newsletter"); ?></span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
@@ -422,13 +427,13 @@
                     </ul>
                 </li>
                 <li class="header text-uppercase"><?php echo trans("settings"); ?></li>
-                <li class="nav-preferences">
+                <li class="nav-hide nav-preferences">
                     <a href="<?php echo admin_url(); ?>preferences">
                         <i class="fa fa-check-square-o"></i>
                         <span><?php echo trans("preferences"); ?></span>
                     </a>
                 </li>
-                <li class="treeview<?php is_admin_nav_active(['settings', 'languages', 'social-login', 'update-language', 'translations', 'email-settings']); ?>">
+                <li class="nav-hide treeview<?php is_admin_nav_active(['settings', 'languages', 'social-login', 'update-language', 'translations', 'email-settings']); ?>">
                     <a href="#">
                         <i class="fa fa-cog"></i>
                         <span><?php echo trans("general_settings"); ?></span>
@@ -441,12 +446,12 @@
                         <li class="nav-social-login"><a href="<?php echo admin_url(); ?>social-login"> <?php echo trans("social_login"); ?></a></li>
                     </ul>
                 </li>
-                <li class="nav-product-settings">
+                <li class="nav-product-settings nav-hide">
                     <a href="<?php echo admin_url(); ?>product-settings">
                         <i class="fa fa-list-ul"></i> <span><?php echo trans("product_settings"); ?></span>
                     </a>
                 </li>
-                <li class="treeview<?php is_admin_nav_active(['payment-settings', 'currency-settings']); ?>">
+                <li class="nav-hide treeview<?php is_admin_nav_active(['payment-settings', 'currency-settings']); ?>">
                     <a href="#">
                         <i class="fa fa-credit-card-alt"></i>
                         <span><?php echo trans("payment_settings"); ?></span>
@@ -465,12 +470,12 @@
                     </a>
                     <ul class="treeview-menu">
                         <li class="nav-visual-settings"><a href="<?php echo admin_url(); ?>visual-settings"> <?php echo trans("visual_settings"); ?></a></li>
-                        <li class="nav-font-settings"><a href="<?php echo admin_url(); ?>font-settings"> <?php echo trans("font_settings"); ?></a></li>
+                        <li class="nav-hide nav-font-settings"><a href="<?php echo admin_url(); ?>font-settings"> <?php echo trans("font_settings"); ?></a></li>
                     </ul>
                 </li>
 
 
-                <li class="treeview<?php is_admin_nav_active(['system-settings', 'route-settings']); ?>">
+                <li class="nav-hide treeview<?php is_admin_nav_active(['system-settings', 'route-settings']); ?>">
                     <a href="#">
                         <i class="fa fa-cogs"></i>
                         <span><?php echo trans("system_settings"); ?></span>

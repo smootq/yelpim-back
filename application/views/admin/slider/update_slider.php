@@ -115,28 +115,28 @@
 				</div>
 
 				<div class="form-group">
-					<label class="control-label"><?php echo trans('image'); ?> (1920x600)</label>
+					<label class="control-label"><?php echo trans('image'); ?> (370x245)</label>
 					<div class="display-block m-b-15">
 						<img src="<?php echo base_url() . $item->image; ?>" alt="" class="img-responsive" style="max-width: 300px; max-height: 300px;">
 					</div>
 					<div class="display-block">
 						<a class='btn btn-success btn-sm btn-file-upload'>
 							<?php echo trans('select_image'); ?>
-							<input type="file" name="file" accept=".png, .jpg, .jpeg, .gif" onchange="show_preview_image(this);">
+							<input type="file" name="file" accept=".png" onchange="show_preview_image(this);">
 						</a>
 					</div>
 					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" id="img_preview_file" class="img-file-upload-preview">
 				</div>
 
-                <div class="form-group">
-                    <label class="control-label"><?php echo trans('image'); ?>&nbsp;(for mobile) (768x500)</label>
+                <div class="form-group" style="display: none;">
+                    <label class="control-label"><?php echo trans('image'); ?>&nbsp;(for mobile) (370x245)</label>
                     <div class="display-block m-b-15">
                         <img src="<?php echo base_url() . $item->image_mobile; ?>" alt="" class="img-responsive" style="max-width: 300px; max-height: 300px;">
                     </div>
                     <div class="display-block">
                         <a class='btn btn-success btn-sm btn-file-upload'>
                             <?php echo trans('select_image'); ?>
-                            <input type="file" name="file_mobile" accept=".png, .jpg, .jpeg, .gif" onchange="show_preview_image(this);">
+                            <input type="file" name="file_mobile" accept=".png" onchange="show_preview_image(this);">
                         </a>
                     </div>
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" id="img_preview_file_mobile" class="img-file-upload-preview">

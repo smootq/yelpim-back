@@ -17,6 +17,7 @@ class Product_controller extends Admin_Core_Controller
      */
     public function products()
     {
+
         $data['title'] = trans("products");
         $data['form_action'] = admin_url() . "products";
         $data['list_type'] = "products";

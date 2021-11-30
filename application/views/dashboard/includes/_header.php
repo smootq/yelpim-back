@@ -25,6 +25,11 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/vendor/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/css/plugins-1.8.css">
 
+    <!-- template style --> 
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/global.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/style-1.8.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/global-admin.css">
+
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/css/AdminLTE.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/css/skin-black-light.min.css">
@@ -35,6 +40,8 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/css/main-1.8.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/css/dashboard-1.8.css">
+    
+  
     <style>body, h1, h2, h3, h4, h5, h6 {
         <?php echo $this->fonts->dashboard_font_family; ?>
         }
@@ -64,84 +71,90 @@
 </head>
 <body class="hold-transition skin-black-light sidebar-mini">
 <div class="wrapper">
-    <header class="main-header">
-        <div class="main-header-inner">
-            <!-- Header Navbar: style can be found in header.less -->
-            <nav class="navbar navbar-static-top">
-                <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </a>
-
-                <div class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a class="btn btn-sm btn-success pull-left btn-site-prev" target="_blank" href="<?php echo lang_base_url(); ?>"><i class="fa fa-eye"></i> &nbsp;<span class="btn-site-prev-text"><?php echo trans("view_site"); ?></span></a>
-                        </li>
-                        <?php if ($this->general_settings->multilingual_system == 1 && count($this->languages) > 1): ?>
-                            <li class="nav-item dropdown language-dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                    <img src="<?php echo base_url($this->selected_lang->flag_path); ?>" class="flag"><?php echo html_escape($this->selected_lang->name); ?> <i class="fa fa-caret-down"></i>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <?php foreach ($this->languages as $language): ?>
-                                        <a href="<?php echo convert_url_by_language($language); ?>" class="<?php echo ($language->id == $this->selected_lang->id) ? 'selected' : ''; ?> " class="dropdown-item">
-                                            <img src="<?php echo base_url($language->flag_path); ?>" class="flag"><?php echo $language->name; ?>
-                                        </a>
-                                    <?php endforeach; ?>
-                                </div>
-                            </li>
-                        <?php endif; ?>
-                        <li class="dropdown user user-menu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="<?php echo get_user_avatar($this->auth_user); ?>" class="user-image" alt="">
-                                <span class="hidden-xs"><?= get_shop_name($this->auth_user); ?></span>&nbsp;<i class="fa fa-caret-down caret-profile"></i>
-                            </a>
-
-                            <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
-                                <?php if ($this->auth_user->role == "admin"): ?>
-                                    <li>
-                                        <a href="<?php echo admin_url(); ?>"><i class="icon-admin"></i> <?php echo trans("admin_panel"); ?></a>
-                                    </li>
+<header>
+        <?php $this->load->view("partials/_top_bar"); ?>
+        
+        <div class="menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                    <a href="<?php echo lang_base_url(); ?>"><img src="<?php echo get_logo($this->general_settings); ?>" alt="logo" class="img-responsive"></a>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-groupe search <?= $this->general_settings->multi_vendor_system != 1 ? ' top-search-bar-single-vendor' : ''; ?>">
+                            <?php echo form_open(generate_url('search'), ['id' => 'form_validate_search', 'class' => 'form_search_main', 'method' => 'get']); ?>
+                            <?php if ($this->general_settings->multi_vendor_system == 1): ?>                                    
+                                <input type="hidden" class="search_type_input" name="search_type" value="product">
+                                    <input type="text" name="search" maxlength="300" pattern=".*\S+.*" id="input_search" class="form-control" value="<?php echo (!empty($filter_search)) ? $filter_search : ''; ?>" placeholder="<?php echo trans("search_exp"); ?>" required autocomplete="off">
+                                    <button class="btn btn-default btn-search"><i class="icon-search"></i></button>
+                                    <div id="response_search_results" class="search-results-ajax"></div>
+                                <?php else: ?>
+                                    <input type="text" name="search" maxlength="300" pattern=".*\S+.*" id="input_search" class="form-control input-search" value="<?php echo (!empty($filter_search)) ? $filter_search : ''; ?>" placeholder="<?php echo trans("search_products"); ?>" required autocomplete="off">
+                                    <input type="hidden" class="search_type_input" name="search_type" value="product">
+                                    <button class="btn btn-default btn-search"><i class="icon-search"></i></button>
+                                    <div id="response_search_results" class="search-results-ajax"></div>
                                 <?php endif; ?>
-                                <li>
-                                    <a href="<?php echo generate_profile_url($this->auth_user->slug); ?>"><i class="fa fa-user"></i> <?php echo trans("profile"); ?></a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo generate_url("settings"); ?>"><i class="fa fa-cog"></i> <?php echo trans("update_profile"); ?></a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo generate_url("settings", "change_password"); ?>"><i class="fa fa-lock"></i> <?php echo trans("change_password"); ?></a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>logout"><i class="fa fa-sign-out"></i> <?php echo trans("logout"); ?></a>
-                                </li>
-                            </ul>
-                        </li>
+                            <?php echo form_close(); ?>
+                        </div>
 
-                    </ul>
+                    </div>
+                    <!--<div class="col-sm-3">
+                        <div class="plus">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="form-groupe select">
+                                        <select class="">
+                                            <option>Categories</option>
+                                            <option>........</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-groupe select">
+                                        <select class="">
+                                            <option>Aide</option>
+                                            <option>........</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="panier">
+                                        <img src="img/panier.svg" alt="">
+                                        <span>2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-            <div class="sidebar-scrollbar">
-                <div class="logo">
-                    <a href="<?= dashboard_url(); ?>"><img src="<?php echo get_logo($this->general_settings); ?>" alt="logo"></a>
-                </div>
-                <div class="user-panel">
-                    <div class="image">
-                        <img src="<?php echo get_user_avatar($this->auth_user); ?>" class="img-circle" alt="">
+
+    section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="box-white">
+                        <div class="profile  text-center">
+                            <div class="avatar-upload">
+                                <div class="avatar-edit">
+                                    <input type="file" id="file" accept=".png, .jpg, .jpeg">
+                                    <label for="file">
+                                        <img src="assets/img/edit2.svg">
+                                    </label>
+                                </div>
+                                <div class="avatar-preview">
+                                <img src="<?php echo get_user_avatar($this->auth_user); ?>" class="img-circle" alt="">
+                                </div>
+                            </div>
+                            <h5><?= trans("hi") . ", " . get_shop_name($this->auth_user); ?></h5>
+                           
+                        </div>
                     </div>
-                    <div class="username">
-                        <p><?= trans("hi") . ", " . get_shop_name($this->auth_user); ?></p>
-                    </div>
-                </div>
-                <ul class="sidebar-menu" data-widget="tree">
+                    <div class="box-white">
+                    <ul class="sidebar-menu" data-widget="tree">
                     <li class="header"><?php echo trans("navigation"); ?></li>
                     <li class="nav-home">
                         <a href="<?php echo dashboard_url(); ?>">
@@ -273,28 +286,8 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-        </section>
-        <!-- /.sidebar -->
-    </aside>
-
-    <?php
-    $segment2 = @$this->uri->segment(2);
-    $segment3 = @$this->uri->segment(3);
-
-    $uri_string = $segment2;
-    if (!empty($segment3)) {
-        $uri_string .= '-' . $segment3;
-    } ?>
-    <style>
-        <?php if(!empty($uri_string)):
-        echo '.nav-'.$uri_string.' > a{color: #2C344C !important; background-color:#F7F8FC;}';
-        else:
-        echo '.nav-home > a{color: #2C344C !important; background-color:#F7F8FC;}';
-        endif;?>
-    </style>
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Main content -->
-        <section class="content">
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="box-white d1">
+                        <div class="row">

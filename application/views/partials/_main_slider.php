@@ -1,5 +1,4 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-
 <div class="index-main-slider <?php echo ($this->general_settings->slider_type == "boxed") ? "container container-boxed-slider" : "container-fluid"; ?>">
     <div class="row">
         <div class="slider-container" <?= $this->rtl == true ? 'dir="rtl"' : ''; ?>>

@@ -22,7 +22,13 @@
                     </div>
                     <div class="col-sm-6">
                         <ul class="menu1 clean">
-                 
+                        <?php if ($this->general_settings->location_search_header == 1 && item_count($this->countries) > 0): ?>
+                            <!--<li class="nav-item">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#locationModal" class="nav-link btn-modal-location">
+                            <i class="icon-map-marker"></i><?php //!empty($this->default_location_input) ? $this->default_location_input : trans("location"); ?>
+                            </a>
+                            </li>-->
+                            <?php endif; ?>
                             <?php if ($this->payment_settings->currency_converter == 1 && !empty($this->currencies)): ?>
                             <li class="nav-item dropdown language-dropdown currency-dropdown">
                             <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown">

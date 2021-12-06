@@ -10,9 +10,7 @@ endif; ?>
 <?php endif; ?>
 
 <!-- featured products -->
-<?php if ($this->general_settings->index_promoted_products == 1 
-    && $this->general_settings->promoted_products == 1 
-    && !empty($promoted_products)): ?>
+<?php if ($this->general_settings->index_promoted_products == 1 && $this->general_settings->promoted_products == 1 && !empty($promoted_products)): ?>
     <?php $this->load->view("product/_featured_products"); ?>
 <?php endif; ?>
 
@@ -50,4 +48,4 @@ endif; ?>
                 </div>
             </div>
         </div>
-</section>
+    </section>

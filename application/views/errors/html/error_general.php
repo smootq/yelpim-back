@@ -24,7 +24,6 @@ if (strpos($message, 'The action you have requested is not allowed.') !== false)
 
         body {
             background-color: #fff;
-            margin: 40px;
             font: 13px/20px normal Helvetica, Arial, sans-serif;
             color: #4F5155;
         }

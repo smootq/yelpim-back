@@ -19,5 +19,5 @@
                 <?php endforeach; ?>
             </div>
         </div>
-</section>
-<?php endif; ?>
+    </section>
+    <?php endif; ?>

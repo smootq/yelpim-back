@@ -61,12 +61,19 @@ foreach ($this->languages as $language): ?>
 <?php endforeach; endif; ?>
     <link rel="stylesheet" href="<?= base_url(); ?>assets/vendor/font-icons/css/mds-icons.min.css"/>
     <?= !empty($this->fonts->site_font_url) ? $this->fonts->site_font_url : ''; ?>
-
+    
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/plugins-1.8.css"/>
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style-1.8.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style-1.8.css"/>
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/global.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<?php //$this->load->view("partials/_css_js_header"); ?>
 <?php if ($this->rtl == true): ?>
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/rtl-1.8.min.css">
 <?php endif; ?>
@@ -140,6 +147,7 @@ foreach ($this->languages as $language): ?>
             </div>
         </div>
     </header>
+
 
 <div id="overlay_bg" class="overlay-bg"></div>
 <!--include mobile menu-->
@@ -215,4 +223,5 @@ foreach ($this->languages as $language): ?>
         </div>
     </div>
 <?php endif; ?>
+
 <div id="menu-overlay"></div>

@@ -78,6 +78,21 @@ ul.clean
 	right:10px;
 	top:10px;
 }*/
+
+.btn-search{
+	position: absolute !important;
+	top: 5px !important;
+	right: 0px !important;
+	line-height: 29px !important;
+	border: none !important;
+	text-align: center !important;
+	border-radius: 20px !important;
+	font-size: 21px !important;
+	font-weight: bold !important;
+	color: #CC0000 !important; 
+	z-index: 100;
+    }
+
 .select
 {
 	position:relative;

@@ -2,7 +2,7 @@
 <div id="wrapper">
     <div class="container">
         <div class="row">
-daklfsdkfj
+
             <div class="col-12">
                 <div class="blog-content">
                     <nav class="nav-breadcrumb" aria-label="breadcrumb">
@@ -27,3 +27,4 @@ daklfsdkfj
 
         </div>
     </div>
+</div>

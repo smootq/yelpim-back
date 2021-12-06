@@ -84,6 +84,36 @@ ul.clean li {
 	padding-left: 35px;
 }
 
+ul.clean li.header{
+	font-weight: bold;
+	color: #CC0000;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+ul.clean li i{
+    height: 18px;
+    width: 18px;
+    float:left;
+    margin-right: 10px;
+    color: #CC0000;
+    font-size: 18px;
+}
+
+
+
+.treeview-menu{
+	display: none;
+	padding-left: 0px !important;
+}
+
+.treeview-menu li{
+	padding-left: 5px !important;
+}
+
 .menu2 li.m1:before {
 	content: "\f0e4";
 }
@@ -783,7 +813,7 @@ ul.small-stars li {
     list-style: none;
     position: relative;
     padding: 10px 0px;
-    padding-left: 35px;
+    padding-left: 10px;
 	color: #000;
 	font-weight: 500;
 }
@@ -810,6 +840,22 @@ ul a{
 
 
 
+/*** small box **/
+
+
+.small-box i.fa{
+	color: rgba(0,0,0,0.2);
+	
+}
+
+.small-box a p{
+	color: #FFF;
+	font-weight: bold;
+}
+
+.box-header .box-tools .btn-box-tool i{
+	font-size: 14px;
+}
 
 
 

@@ -139,7 +139,7 @@
                         <thead>
                         <tr>
                             <th><?php echo trans("id"); ?></th>
-                            <th><?php echo trans("order"); ?></th>
+                            <th><?php echo trans("order"); ?></th> 
                             <th><?php echo trans("payment_amount"); ?></th>
                             <th><?php echo trans('payment_method'); ?></th>
                             <th><?php echo trans('status'); ?></th>

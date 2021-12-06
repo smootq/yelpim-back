@@ -1,5 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
+
 <section class="bg1 text-center bg-light">
         <div class="container">
         <h2><?php echo trans("featured_products"); ?></h2>
@@ -22,4 +23,4 @@
             </p>
             <?php endif; ?>
         </div>
-</section>
+    </section>

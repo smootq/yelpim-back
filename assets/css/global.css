@@ -215,12 +215,20 @@ section.slider .owl-theme .owl-dots .owl-dot:active span {
 .owl-nav  span {
     display: none;
 }
-section h2
+.box-header{
+	text-align: left !important; 
+}
+section h2, .box-header .box-title
 {
-	color: #00457C;
+    color: #00457C;
     font-weight: 600;
-    font-size: 25px;
-    text-align: center;
+    font-size: 25px !important;
+    text-align: left !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+.options-dropdown i.fa{
+	font-size: 18px !important;
+	color: #CC0000;
 }
 section p
 {

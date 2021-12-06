@@ -188,7 +188,7 @@ $route[getr('admin', $rts)] = 'admin_controller/index';
 //login
 $route[getr('admin', $rts) . '/login'] = 'common_controller/admin_login';
 /*navigation routes*/
-$route[getr('admin', $rts) . '/navigation'] = 'admin_controller/navigation';
+//$route[getr('admin', $rts) . '/navigation'] = 'admin_controller/navigation';
 $route[getr('admin', $rts) . '/homepage-manager'] = 'admin_controller/homepage_manager';
 $route[getr('admin', $rts) . '/edit-banner/(:num)'] = 'admin_controller/edit_index_banner/$1';
 /*slider routes*/

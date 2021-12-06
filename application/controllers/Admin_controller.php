@@ -40,14 +40,14 @@ class Admin_controller extends Admin_Core_Controller
     /*
     * Navigation
     */
-    public function navigation()
+    /*public function navigation()
     {
         $data['title'] = trans("navigation");
 
         $this->load->view('admin/includes/_header', $data);
         $this->load->view('admin/navigation', $data);
         $this->load->view('admin/includes/_footer');
-    }
+    }*/
 
     /**
      * Navigation Post

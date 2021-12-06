@@ -25,12 +25,12 @@
                                 <i class="fa fa-home"></i> <span><?php echo trans("home"); ?></span>
                         </a>
                         </li>
-                        <li class="nav-navigation nav-hide">
-                        <a href="<?php echo admin_url(); ?>navigation">
+                        <!--<li class="nav-navigation nav-hide">
+                        <a href="<?php //echo admin_url(); ?>navigation">
                                 <i class="fa fa-th"></i>
-                                <span><?php echo trans("navigation"); ?></span>
+                                <span><?php //echo trans("navigation"); ?></span>
                         </a>
-                        </li>
+                        </li>-->
                         <li class="nav-slider ">
                         <a href="<?php echo admin_url(); ?>slider">
                                 <i class="fa fa-sliders"></i>

@@ -1,7 +1,8 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
 
-                        <div class="row">
+<div class="box-white d1">
+        <div class="row">
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
         <div class="small-box admin-small-box bg-success">

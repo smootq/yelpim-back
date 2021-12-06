@@ -6,7 +6,7 @@
 	"slideInRight", "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp", "hinge", "jackInTheBox", "rollIn"]; ?>
 
 <div class="row">
-	<div class="col-lg-5 col-md-12">
+	<div class="col-lg-12 col-md-12">
 		<div class="box box-primary">
 			<!-- /.box-header -->
 			<div class="box-header with-border">
@@ -21,7 +21,7 @@
 				<!-- include message block -->
 				<?php $this->load->view('admin/includes/_messages'); ?>
 
-				<div class="form-group">
+				<div class="form-group col-md-6">
 					<label><?php echo trans("language"); ?></label>
 					<select name="lang_id" class="form-control">
 						<?php foreach ($this->languages as $language): ?>
@@ -29,25 +29,27 @@
 						<?php endforeach; ?>
 					</select>
 				</div>
-				<div class="form-group">
+				<div class="form-group col-md-6">
 					<label class="control-label"><?php echo trans('title'); ?></label>
 					<input type="text" class="form-control" name="title" placeholder="<?php echo trans('title'); ?>" value="<?php echo html_escape($item->title); ?>" <?php echo ($this->rtl == true) ? 'dir="rtl"' : ''; ?>>
 				</div>
-				<div class="form-group">
-					<label class="control-label"><?php echo trans('description'); ?></label>
-					<textarea name="description" class="form-control" placeholder="<?php echo trans('description'); ?>" <?php echo ($this->rtl == true) ? 'dir="rtl"' : ''; ?>><?php echo html_escape($item->description); ?></textarea>
-				</div>
-				<div class="form-group">
+				
+				<div class="form-group col-md-6">
 					<label class="control-label"><?php echo trans('link'); ?></label>
 					<input type="text" class="form-control" name="link" placeholder="<?php echo trans('link'); ?>" value="<?php echo $item->link; ?>" <?php echo ($this->rtl == true) ? 'dir="rtl"' : ''; ?>>
 				</div>
+				<div class="form-group col-md-6">
+					<label class="control-label"><?php echo trans('order'); ?></label>
+					<input type="number" class="form-control" name="item_order" placeholder="<?php echo trans('order'); ?>" value="<?php echo $item->item_order; ?>" <?php echo ($this->rtl == true) ? 'dir="rtl"' : ''; ?>>
+				</div>
+				<div class="form-group col-md-12">
+					<label class="control-label"><?php echo trans('description'); ?></label>
+					<textarea name="description" class="form-control" placeholder="<?php echo trans('description'); ?>" <?php echo ($this->rtl == true) ? 'dir="rtl"' : ''; ?>><?php echo html_escape($item->description); ?></textarea>
+				</div>
 
-				<div class="row row-form">
+				<div class="row row-form " style="display:none;">
 					<div class="col-sm-12 col-md-6 col-form">
-						<div class="form-group">
-							<label class="control-label"><?php echo trans('order'); ?></label>
-							<input type="number" class="form-control" name="item_order" placeholder="<?php echo trans('order'); ?>" value="<?php echo $item->item_order; ?>" <?php echo ($this->rtl == true) ? 'dir="rtl"' : ''; ?>>
-						</div>
+						
 					</div>
 					<div class="col-sm-12 col-md-6 col-form">
 						<div class="form-group">
@@ -57,7 +59,7 @@
 					</div>
 				</div>
 
-                <div class="row row-form">
+                <div class="row row-form" style="display:none;">
                     <div class="col-sm-12 col-md-4 col-form">
                         <div class="form-group">
                             <label class="control-label"><?php echo trans('text_color'); ?></label>
@@ -78,7 +80,7 @@
                     </div>
                 </div>
 
-				<div class="row row-form">
+				<div class="row row-form" style="display:none;">
 					<div class="col-sm-12" style="padding-left: 7.5px;">
 						<label><?php echo trans("animations"); ?></label>
 					</div>

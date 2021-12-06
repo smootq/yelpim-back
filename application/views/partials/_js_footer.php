@@ -3,7 +3,9 @@
 <script src="https://use.fontawesome.com/24b7f338c4.js"></script>
 <script src="<?= base_url(); ?>assets/js/owl.carousel.js"></script>
 <script src="<?= base_url(); ?>assets/js/lightslider.js"></script>
+<script src="<?= base_url(); ?>assets/js/plugins-1.8.js"></script>
 <script src="<?= base_url(); ?>assets/js/global.js"></script>
+
 
 <script>
          $('#lightSlider').lightSlider({

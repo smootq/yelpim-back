@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= xss_clean($title); ?> - <?= xss_clean($this->settings->site_title); ?></title>
-    <meta name="description" content="<?= xss_clean($description); ?>"/>
-    <meta name="keywords" content="<?= xss_clean($keywords); ?>"/>
+    <meta name="description" content="<?php if (isset($description)) echo xss_clean($description); ?>"/>
+    <meta name="keywords" content="<?php if(isset($keywords)) echo xss_clean($keywords); ?>"/>
     <meta name="author" content="<?= xss_clean($this->general_settings->application_name); ?>"/>
     <link rel="shortcut icon" type="image/png" href="<?= get_favicon($this->general_settings); ?>"/>
     <meta property="og:locale" content="en-US"/>
@@ -38,13 +38,13 @@
     <meta property="og:image:height" content="60"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="<?= xss_clean($title); ?> - <?= xss_clean($this->settings->site_title); ?>"/>
-    <meta property="og:description" content="<?= xss_clean($description); ?>"/>
+    <meta property="og:description" content="<?php if(isset($description)) echo xss_clean($description); ?>"/>
     <meta property="og:url" content="<?= base_url(); ?>"/>
     <meta property="fb:app_id" content="<?= $this->general_settings->facebook_app_id; ?>"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@<?= xss_clean($this->general_settings->application_name); ?>"/>
     <meta name="twitter:title" content="<?= xss_clean($title); ?> - <?= xss_clean($this->settings->site_title); ?>"/>
-    <meta name="twitter:description" content="<?= xss_clean($description); ?>"/>
+    <meta name="twitter:description" content="<?php if(isset($description)) echo xss_clean($description); ?>"/>
 <?php endif; ?>
 <?php if ($this->general_settings->pwa_status == 1): ?>
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -64,7 +64,9 @@ foreach ($this->languages as $language): ?>
 
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/style-1.8.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/global.css">
+ 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap">
     
 <?php if ($this->rtl == true): ?>
@@ -154,7 +156,7 @@ foreach ($this->languages as $language): ?>
                     <button type="button" class="close" data-dismiss="modal"><i class="icon-close"></i></button>
                     <h4 class="title"><?php echo trans("login"); ?></h4>
                     <!-- form start -->
-                    <form id="form_login" novalidate="novalidate">
+                    <form id="form_login" novalidate="novalidate" method="post">
                         <div class="social-login">
                             <?php $this->load->view("partials/_social_login", ["or_text" => trans("login_with_email")]); ?>
                         </div>

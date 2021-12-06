@@ -13,6 +13,7 @@ class Auth_controller extends Home_Core_Controller
      */
     public function login_post()
     {
+
         //check auth
         if ($this->auth_check) {
             $data = array(

@@ -23,7 +23,7 @@
                     <div class="col-sm-6">
                         <ul class="menu1 clean">
                  
-                            <?php if ($this->payment_settings->currency_converter == 1 && !empty($this->currencies)): ?>
+                            <?php if ($this->payment_settings->currency_converter == 1 && !empty($this->currencies) && isset($this->selected_currency->code)): ?>
                             <li class="nav-item dropdown language-dropdown currency-dropdown">
                             <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown">
                             <?= $this->selected_currency->code; ?>&nbsp;(<?= $this->selected_currency->symbol; ?>)<i class="icon-arrow-down"></i>
@@ -59,7 +59,7 @@
                             <li class="nav-item dropdown profile-dropdown p-r-0">
                             <a class="nav-link dropdown-toggle a-profile" data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false">
                             <img src="<?php echo get_user_avatar($this->auth_user); ?>" alt="<?php echo get_shop_name($this->auth_user); ?>">
-                            <?php if ($unread_message_count > 0): ?>
+                            <?php if (isset($unread_message_count) && $unread_message_count > 0): ?>
                             <span class="notification"><?php echo $unread_message_count; ?></span>
                             <?php endif; ?>
                             <?php echo character_limiter(get_shop_name($this->auth_user), 15, '..'); ?>
@@ -115,7 +115,7 @@
                             <li>
                             <a href="<?php echo generate_url("messages"); ?>">
                             <i class="icon-mail"></i>
-                            <?php echo trans("messages"); ?>&nbsp;<?php if ($unread_message_count > 0): ?>
+                            <?php echo trans("messages"); ?>&nbsp;<?php if (isset($unread_message_count) && $unread_message_count > 0): ?>
                             <span class="span-message-count"><?php echo $unread_message_count; ?></span>
                             <?php endif; ?>
                             </a>

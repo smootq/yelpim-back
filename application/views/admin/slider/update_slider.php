@@ -5,7 +5,16 @@
 	"flipInX", "flipInY", "lightSpeedIn", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "slideInUp", "slideInDown", "slideInLeft",
 	"slideInRight", "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp", "hinge", "jackInTheBox", "rollIn"]; ?>
 
-<div class="row">
+
+<div class="box-white pad20 ">
+    <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-left"><?php echo trans('slider'); ?></h2>
+            </div>
+        </div>
+</div>
+<div class="box-white d1">
+        <div class="row">
 	<div class="col-lg-12 col-md-12">
 		<div class="box box-primary">
 			<!-- /.box-header -->

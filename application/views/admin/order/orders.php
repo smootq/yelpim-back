@@ -1,5 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
+<div class="box-white pad20 ">
+    <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-left"><?php echo $title; ?></h2>
+            </div>
+        </div>
+</div>
+
+<div class="box-white d1">
+        <div class="row">
 <div class="box">
 	<div class="box-header with-border">
 		<h3 class="box-title"><?php echo $title; ?></h3>

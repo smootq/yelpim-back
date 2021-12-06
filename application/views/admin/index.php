@@ -1,6 +1,12 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-
+<div class="box-white pad20 ">
+    <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-left"><?php echo trans('dashboard'); ?></h2>
+            </div>
+        </div>
+</div>
 <div class="box-white d1">
         <div class="row">
     <div class="col-lg-3 col-xs-6">

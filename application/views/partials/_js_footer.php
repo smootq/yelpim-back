@@ -5,6 +5,10 @@
 <script src="<?= base_url(); ?>assets/js/lightslider.js"></script>
 <script src="<?= base_url(); ?>assets/js/plugins-1.8.js"></script>
 <script src="<?= base_url(); ?>assets/js/global.js"></script>
+<?php if($isAdminPage ): ?>
+    <script src="<?= base_url(); ?>assets/admin/js/dashboard-1.8.js"></script>
+    <script src="<?= base_url(); ?>assets/admin/js/main-1.8.js"></script>
+<?php endif; ?>
 
 
 <script>

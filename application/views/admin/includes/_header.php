@@ -42,6 +42,12 @@
     <?php endif;
     endif; ?>
 
+    <script>
+        var base_url = "<?= base_url(); ?>";
+        var csfr_token_name = "<?= $this->security->get_csrf_token_name(); ?>";
+        var csfr_cookie_name = "<?= $this->config->item('csrf_cookie_name'); ?>";
+    </script>
+
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/global-admin.css" />
 
     <section>

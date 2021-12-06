@@ -6,7 +6,7 @@
                 <p><?php echo trans("latest_products_exp"); ?></p>
             <div class="pad20"></div>
             <div class="owl-carousel slide3 owl-theme noDots">
-                <?php foreach ($latest_products as $product): ?>
+                <?php foreach ($latest_products as $product):  ?>
                 <div class="item">
                         <h3><?php echo get_product_title($product); ?></h3>
                         <div class="box1">

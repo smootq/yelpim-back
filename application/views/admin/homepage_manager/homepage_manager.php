@@ -1,12 +1,16 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-<div class="row" style="margin-bottom: 15px;">
-    <div class="col-sm-12">
-        <h3 style="font-size: 18px; font-weight: 600;"><?= $title; ?></h3>
-    </div>
+
+<div class="box-white pad20 ">
+    <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-left"><?= $title; ?></h2>
+            </div>
+        </div>
 </div>
 
-<div class="row">
-    <div class="col-md-12 col-lg-6">
+<div class="box-white d1">
+        <div class="row">
+    <div class="col-md-12 col-lg-12">
         <div class="box box-primary">
             <div class="box-header with-border">
                 <h3 class="box-title">
@@ -67,7 +71,7 @@
             <?php echo form_close(); ?>
         </div>
     </div>
-    <div class="col-md-12 col-lg-6">
+    <div class="col-md-12 col-lg-12" style="display:none;">
         <div class="box box-primary">
             <div class="box-header with-border">
                 <h3 class="box-title">
@@ -141,7 +145,7 @@
         </div>
     </div>
 </div>
-<div id="section_banners" class="row">
+<div id="section_banners" class="row" style="display:none;">
     <div class="col-sm-12">
         <div class="box box-primary">
             <div class="box-header with-border">
@@ -209,7 +213,7 @@
     </div>
 </div>
 <div id="product_settings" class="row">
-    <div class="col-lg-6 col-md-12">
+    <div class="col-lg-12 col-md-12">
         <div class="box box-primary">
             <!-- /.box-header -->
             <div class="box-header with-border">
@@ -281,7 +285,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="display:none;">
                     <div class="row">
                         <div class="col-sm-12 col-xs-12">
                             <label class="control-label"><?php echo trans("number_featured_products"); ?></label>
@@ -291,7 +295,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="display:none;">
                     <div class="row">
                         <div class="col-sm-12 col-xs-12">
                             <label class="control-label"><?php echo trans('number_latest_products'); ?></label>

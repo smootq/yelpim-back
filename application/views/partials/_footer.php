@@ -51,6 +51,10 @@
         </div>
 </footer>
 
-<?php $this->load->view("partials/_js_footer"); ?>
+
+<?php 
+if(!isset($isAdminPage)) $isAdminPage = 0; 
+
+$this->load->view("partials/_js_footer", ['isAdminPage' => $isAdminPage]); ?>
 
 </html>

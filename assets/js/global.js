@@ -28,5 +28,20 @@ $(document).ready(function () {
             }
             form[0].classList.add('was-validated');
         });
+
+
+        $('.treev_open').click(function(){
+          
+            if($(this).find('i.fa-angle-left').length == 1){
+                $('.treeview-menu').hide();
+                $('.treev_open').find('i.fa-angle-down').removeClass('fa-angle-down').addClass('fa-angle-left');
+                $(this).find('i.fa-angle-left').removeClass('fa-angle-left').addClass('fa-angle-down');
+                $(this).parent('.treev').find('.treeview-menu').show();
+            }else{
+                $('.treeview-menu').hide();
+                $('.treev_open').find('i.fa-angle-down').removeClass('fa-angle-down').addClass('fa-angle-left');
+            }
+            
+        });
     });
     

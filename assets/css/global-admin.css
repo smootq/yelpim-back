@@ -565,9 +565,14 @@ img {
 	padding-top: 20px;
 }
 
-.d1 {
-	text-align: center;
+.control-label{
+	text-align: left !important;
 }
+
+.d1 {
+	text-align: left;
+}
+    
 
 .d1 i {
 	font-size: 40px;

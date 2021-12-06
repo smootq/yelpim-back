@@ -14,7 +14,7 @@
                                 </div>
                         </div>
                         <h5><?php echo $this->auth_user->username; ?></h5>
-                        <p><a href="#"><i class="fa fa-circle text-success"></i> <?php echo trans("online"); ?></a></p>
+                        <p><a href="javascript:void(0);" class="treev_open"><i class="fa fa-circle text-success"></i> <?php echo trans("online"); ?></a></p>
                 </div>
                 
         </div>
@@ -44,8 +44,8 @@
                         </a>
                         </li>
                         <li class="header"><?php echo trans("orders"); ?></li>
-                        <li class="treeview<?php is_admin_nav_active(['orders', 'transactions', 'order-bank-transfers', 'invoices', 'order-details']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['orders', 'transactions', 'order-bank-transfers', 'invoices', 'order-details']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span><?php echo trans("orders"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -63,8 +63,8 @@
                                 <span><?php echo trans("digital_sales"); ?></span>
                         </a>
                         </li>
-                        <li class="treeview<?php is_admin_nav_active(['earnings', 'seller-balances', 'update-seller-balance']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['earnings', 'seller-balances', 'update-seller-balance']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-money" aria-hidden="true"></i>
                                 <span><?php echo trans("earnings"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -74,8 +74,8 @@
                                 <li class="nav-seller-balances"><a href="<?php echo admin_url(); ?>seller-balances"> <?php echo trans("seller_balances"); ?></a></li>
                         </ul>
                         </li>
-                        <li class="treeview<?php is_admin_nav_active(['add-payout', 'payout-requests', 'completed-payouts', 'payout-settings']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['add-payout', 'payout-requests', 'completed-payouts', 'payout-settings']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-credit-card" aria-hidden="true"></i>
                                 <span><?php echo trans("payouts"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -88,8 +88,8 @@
                         </ul>
                         </li>
                         <li class="header"><?php echo trans("products"); ?></li>
-                        <li class="treeview<?php is_admin_nav_active(['products', 'special-offers', 'pending-products', 'hidden-products', 'expired-products', 'drafts', 'deleted-products', 'product-details', 'sold-products']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['products', 'special-offers', 'pending-products', 'hidden-products', 'expired-products', 'drafts', 'deleted-products', 'product-details', 'sold-products']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-shopping-basket angle-left" aria-hidden="true"></i>
                                 <span><?php echo trans("products"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -109,8 +109,8 @@
                                 <li><a href="<?php echo generate_dash_url("bulk_product_upload"); ?>"> <?php echo trans("bulk_product_upload"); ?></a></li>
                         </ul>
                         </li>
-                        <li class="nav-hide treeview<?php is_admin_nav_active(['featured-products', 'featured-products-pricing', 'featured-products-transactions']); ?>">
-                        <a href="#">
+                        <li class="nav-hide treev treeview<?php is_admin_nav_active(['featured-products', 'featured-products-pricing', 'featured-products-transactions']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-dollar" aria-hidden="true"></i>
                                 <span><?php echo trans("featured_products"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -126,8 +126,8 @@
                                 <i class="fa fa-tag"></i> <span><?php echo trans("quote_requests"); ?></span>
                         </a>
                         </li>
-                        <li class="treeview<?php is_admin_nav_active(['categories', 'add-category', 'update-category', 'bulk-category-upload']); ?>">
-                        <a href="#">
+                        <li class=" treev treeview<?php is_admin_nav_active(['categories', 'add-category', 'update-category', 'bulk-category-upload']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-folder-open"></i>
                                 <span><?php echo trans("categories"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -140,8 +140,8 @@
                                 <?php endif; ?>
                         </ul>
                         </li>
-                        <li class="nav-hide treeview<?php is_admin_nav_active(['add-custom-field', 'custom-fields', 'update-custom-field', 'custom-field-options']); ?>">
-                        <a href="#">
+                        <li class="nav-hide treev treeview<?php is_admin_nav_active(['add-custom-field', 'custom-fields', 'update-custom-field', 'custom-field-options']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-plus-square-o"></i>
                                 <span><?php echo trans("custom_fields"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -153,8 +153,8 @@
                         </li>
 
                         <li class="header"><?php echo trans("content"); ?></li>
-                        <li class="nav-hide treeview<?php is_admin_nav_active(['add-page', 'pages', 'update-page']); ?>">
-                        <a href="#">
+                        <li class="nav-hide treev treeview<?php is_admin_nav_active(['add-page', 'pages', 'update-page']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-file"></i>
                                 <span><?php echo trans("pages"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -164,8 +164,8 @@
                                 <li class="nav-pages"><a href="<?php echo admin_url(); ?>pages"> <?php echo trans("pages"); ?></a></li>
                         </ul>
                         </li>
-                        <li class="treeview<?php is_admin_nav_active(['blog-add-post', 'blog-posts', 'blog-categories', 'update-blog-post', 'update-blog-category']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['blog-add-post', 'blog-posts', 'blog-categories', 'update-blog-post', 'update-blog-category']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-file-text"></i>
                                 <span><?php echo trans("blog"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -176,8 +176,8 @@
                                 <li class="nav-blog-categories"><a href="<?php echo admin_url(); ?>blog-categories"> <?php echo trans("categories"); ?></a></li>
                         </ul>
                         </li>
-                        <li class="treeview<?php is_admin_nav_active(['countries', 'states', 'cities', 'add-country', 'add-state', 'add-city', 'update-country', 'update-state', 'update-city']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['countries', 'states', 'cities', 'add-country', 'add-state', 'add-city', 'update-country', 'update-state', 'update-city']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-map-marker"></i>
                                 <span><?php echo trans("location"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -189,8 +189,8 @@
                         </ul>
                         </li>
                         <li class="header"><?php echo trans("membership"); ?></li>
-                        <li class="treeview<?php is_admin_nav_active(['membership-plans', 'transactions-membership']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['membership-plans', 'transactions-membership']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-adjust"></i>
                                 <span><?php echo trans("membership"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -206,8 +206,8 @@
                                 <span><?php echo trans("shop_opening_requests"); ?></span>
                         </a>
                         </li>
-                        <li class="treeview<?php is_admin_nav_active(['add-administrator', 'administrators', 'vendors', 'members', 'edit-user']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['add-administrator', 'administrators', 'vendors', 'members', 'edit-user']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-users"></i>
                                 <span><?php echo trans("users"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -254,8 +254,8 @@
                                 <span><?php echo trans("reviews"); ?></span>
                         </a>
                         </li>
-                        <li class="treeview<?php is_admin_nav_active(['pending-product-comments', 'pending-blog-comments', 'product-comments', 'blog-comments']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['pending-product-comments', 'pending-blog-comments', 'product-comments', 'blog-comments']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-comments"></i>
                                 <span><?php echo trans("comments"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -276,8 +276,8 @@
                                 <span><?php echo trans("abuse_reports"); ?></span>
                         </a>
                         </li>
-                        <li class="nav-hide treeview<?php is_admin_nav_active(['send-email-subscribers', 'subscribers']); ?>">
-                        <a href="#">
+                        <li class="nav-hide treev treeview<?php is_admin_nav_active(['send-email-subscribers', 'subscribers']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-envelope-o"></i> <span><?php echo trans("newsletter"); ?></span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                         </a>
                         <ul class="treeview-menu">
@@ -296,8 +296,8 @@
                                 <span><?php echo trans("preferences"); ?></span>
                         </a>
                         </li>
-                        <li class="nav-hide treeview<?php is_admin_nav_active(['settings', 'languages', 'social-login', 'update-language', 'translations', 'email-settings']); ?>">
-                        <a href="#">
+                        <li class="nav-hide treev treeview<?php is_admin_nav_active(['settings', 'languages', 'social-login', 'update-language', 'translations', 'email-settings']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-cog"></i>
                                 <span><?php echo trans("general_settings"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -314,8 +314,8 @@
                                 <i class="fa fa-list-ul"></i> <span><?php echo trans("product_settings"); ?></span>
                         </a>
                         </li>
-                        <li class="nav-hide treeview<?php is_admin_nav_active(['payment-settings', 'currency-settings']); ?>">
-                        <a href="#">
+                        <li class="nav-hide treev treeview<?php is_admin_nav_active(['payment-settings', 'currency-settings']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-credit-card-alt"></i>
                                 <span><?php echo trans("payment_settings"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -325,8 +325,8 @@
                                 <li class="nav-currency-settings"><a href="<?php echo admin_url(); ?>currency-settings"> <?php echo trans("currency_settings"); ?></a></li>
                         </ul>
                         </li>
-                        <li class="treeview<?php is_admin_nav_active(['visual-settings', 'font-settings']); ?>">
-                        <a href="#">
+                        <li class="treev treeview<?php is_admin_nav_active(['visual-settings', 'font-settings']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-paint-brush"></i>
                                 <span><?php echo trans("visual_settings"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -338,8 +338,8 @@
                         </li>
 
 
-                        <li class="nav-hide treeview<?php is_admin_nav_active(['system-settings', 'route-settings']); ?>">
-                        <a href="#">
+                        <li class="nav-hide treev treeview<?php is_admin_nav_active(['system-settings', 'route-settings']); ?>">
+                        <a href="javascript:void(0);" class="treev_open">
                                 <i class="fa fa-cogs"></i>
                                 <span><?php echo trans("system_settings"); ?></span>
                                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>

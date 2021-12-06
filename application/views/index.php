@@ -10,6 +10,7 @@ endif; ?>
 <?php endif; ?>
 
 <!-- featured products -->
+
 <?php if ($this->general_settings->index_promoted_products == 1 
     && $this->general_settings->promoted_products == 1 
     && !empty($promoted_products)): ?>

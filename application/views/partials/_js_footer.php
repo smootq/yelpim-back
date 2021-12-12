@@ -1,10 +1,13 @@
 <script src="<?= base_url(); ?>assets/js/jquery-3.5.1.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/bootstrap.min.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=your-id-goes-here" data-sdk-integration-source="button-factory" data-namespace="paypal_sdk"></script>
 <script src="https://use.fontawesome.com/24b7f338c4.js"></script>
 <script src="<?= base_url(); ?>assets/js/owl.carousel.js"></script>
 <script src="<?= base_url(); ?>assets/js/lightslider.js"></script>
 <script src="<?= base_url(); ?>assets/js/plugins-1.8.js"></script>
+<script src="<?= base_url(); ?>assets/js/script-1.8.js"></script>
 <script src="<?= base_url(); ?>assets/js/global.js"></script>
+
 <?php if($isAdminPage ): ?>
     <script src="<?= base_url(); ?>assets/admin/js/dashboard-1.8.js"></script>
     <script src="<?= base_url(); ?>assets/admin/js/main-1.8.js"></script>

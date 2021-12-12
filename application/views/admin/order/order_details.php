@@ -1,9 +1,17 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
+<div class="box-white pad20 ">
+    <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-left"><?php echo trans('order_details'); ?></h2>
+            </div>
+        </div>
+</div>
 
-<div class="row">
-    <div class="col-sm-12">
+
+<div class="box-white d1">
+        <div class="row">
         <div class="box">
-            <div class="box-header with-border">
+            <div class="box-header with-border"> 
                 <div class="left">
                     <h3 class="box-title"><?php echo trans('order_details'); ?></h3>
                 </div>
@@ -334,10 +342,13 @@
                     </div>
                 <?php endif; ?>
 
-
+                
             </div><!-- /.box-body -->
+           
         </div>
+    
     </div>
+    
     <div class="col-sm-12">
         <div class="box">
             <div class="box-header with-border">
@@ -494,6 +505,7 @@
                 </div>
             </div><!-- /.box-body -->
         </div>
+        <div class="clearfix"></div>
     </div>
     <div class="col-sm-12">
         <div class="box-payment-total">
@@ -547,6 +559,7 @@
             </div>
         </div>
     </div>
+    <div class="clearfix"></div>
 </div>
 
 <?php foreach ($order_products as $item): ?>
@@ -644,3 +657,4 @@
 </style>
 
 
+<div class="clearfix"></div>

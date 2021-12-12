@@ -53,7 +53,7 @@
                         <ul class="treeview-menu">
                                 <li class="nav-orders"><a href="<?php echo admin_url(); ?>orders"> <?php echo trans("orders"); ?></a></li>
                                 <li class="nav-transactions"><a href="<?php echo admin_url(); ?>transactions"> <?php echo trans("transactions"); ?></a></li>
-                                <li class="nav-order-bank-transfers"><a href="<?php echo admin_url(); ?>order-bank-transfers"> <?php echo trans("bank_transfer_notifications"); ?></a></li>
+                                <!--<li class="nav-order-bank-transfers"><a href="<?php //echo admin_url(); ?>order-bank-transfers"> <?php //echo trans("bank_transfer_notifications"); ?></a></li>-->
                                 <li class="nav-invoices"><a href="<?php echo admin_url(); ?>invoices"> <?php echo trans("invoices"); ?></a></li>
                         </ul>
                         </li>
@@ -220,7 +220,7 @@
                         </ul>
                         </li>
                         <li class="header"><?php echo trans("management_tools"); ?></li>
-                        <li class="nav-storage">
+                        <!--<li class="nav-storage">
                         <a href="<?php echo admin_url(); ?>storage">
                                 <i class="fa fa-cloud-upload"></i>
                                 <span><?php echo trans("storage"); ?></span>
@@ -231,7 +231,7 @@
                                 <i class="fa fa-database"></i>
                                 <span><?php echo trans("cache_system"); ?></span>
                         </a>
-                        </li>
+                        </li>-->
                         <li class="nav-seo-tools nav-hide">
                         <a href="<?php echo admin_url(); ?>seo-tools">
                                 <i class="fa fa-wrench"></i> <span><?php echo trans("seo_tools"); ?></span>
